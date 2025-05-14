@@ -2,9 +2,11 @@
 
 A very simple plugin for MapLibre GL JS to add a starfield background and a subtle atmospheric glow effect around the globe in 3D globe view.
 
+![Example of maplibre-gl-starfield in action](maplibre-gl-starfield.png)
+
 ## Demo
 
-[https://markmclaren.github.io/maplibre-gl-starfield](maplibre-gl-starfield demo)
+[maplibre-gl-starfield demo](https://markmclaren.github.io/maplibre-gl-starfield)
 
 ## Usage
 
@@ -26,13 +28,13 @@ Download the `maplibre-gl-starfield-0.1.js` file and include it in your HTML *af
     <meta charset="utf-8" />
     <title>MapLibre Globe with Starfield</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <script src="[https://cdn.jsdelivr.net/npm/maplibre-gl@5.5.0/dist/maplibre-gl.js](https://cdn.jsdelivr.net/npm/maplibre-gl@5.5.0/dist/maplibre-gl.js)"></script>
-    <link href="[https://cdn.jsdelivr.net/npm/maplibre-gl@5.5.0/dist/maplibre-gl.css](https://cdn.jsdelivr.net/npm/maplibre-gl@5.5.0/dist/maplibre-gl.css)" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.5.0/dist/maplibre-gl.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.5.0/dist/maplibre-gl.css" rel="stylesheet" />
 
-    <script src="path/to/maplibre-gl-starfield-0.1.js"></script>
+    <script src="maplibre-gl-starfield-0.1.js"></script>
 
     <style>
-      body { margin: 0; padding: 0; }
+      body { margin: 0; padding: 0; background-color: #0A192F; }
       #map-container { position: absolute; top: 0; bottom: 0; width: 100%; z-index: 3; }
       #starfield-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
       #globe-glow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
