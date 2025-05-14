@@ -1,6 +1,6 @@
 # maplibre-gl-starfield
 
-A very simple plugin for MapLibre GL JS to add a starfield background and a subtle atmospheric glow effect around the globe in 3D globe view.
+A very simple plugin for [MapLibre GL JS](https://github.com/maplibre/maplibre-gl-js/) to add a starfield background and a subtle atmospheric glow effect around the globe in 3D globe view.
 
 ![Example of maplibre-gl-starfield in action](maplibre-gl-starfield.png)
 
