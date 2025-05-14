@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      MapLibre Globe with Interactive Starfield and Persistent Atmospheric Glow
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@5.5.0/dist/maplibre-gl.js"></script>
+    <script src="maplibre-gl-starfield-0.1.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/maplibre-gl@5.5.0/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <style>
+      body { margin: 0; padding: 0;   background-color: #0A192F}
+      #map-container { position: absolute; top: 0; bottom: 0; width: 100%; z-index: 3; }
+      #starfield-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+      #globe-glow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+    </style>
+  </head>
+  <body>
+    <div id="starfield-container"></div>
+    <div id="globe-glow"></div>
+    <div id="map-container"></div>
+    <script>
+      const map = new maplibregl.Map({
+        container: "map-container",
+        style: "https://demotiles.maplibre.org/style.json",
+        center: [0, 0],
+        zoom: 1.5,
+        attributionControl: false,
+        canvasContextAttributes: { antialias: true },
+      });
+
+      // Create and attach the starry background
+      const starryBg = new MapLibreStarryBackground({
+        starCount: 500,
+        glowIntensity: 1.0,
+      });
+
+      map.on("style.load", function () {
+        map.setProjection({
+          type: "globe", // Set projection to globe
+        });
+        starryBg.attachToMap(map, "starfield-container", "globe-glow");
+      });      
+    </script>
+  </body>
+</html>
